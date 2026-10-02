@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: 216 28% 5%;
+    --background-secondary: 216 28% 7%;
+    --surface: 215 26% 9%;
+    --surface-elevated: 214 24% 11%;
+    --border: 215 21% 18%;
+    --border-strong: 214 21% 24%;
+    --text-primary: 210 33% 97%;
+    --text-secondary: 214 15% 69%;
+    --text-muted: 214 10% 49%;
+    --accent-primary: 219 100% 65%;
+    --accent-secondary: 174 57% 56%;
+    --success: 150 67% 52%;
+    --warning: 39 90% 63%;
+    --danger: 355 100% 71%;
+    --critical: 350 100% 62%;
+    --info: 216 100% 71%;
+  }
+
+  body {
+    background-color: #090C10;
+    color: #F4F7FA;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Hide scrollbar utility */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* React Flow dark theme overrides */
+.react-flow__background {
+  background-color: #090c10 !important;
+}
+
+.react-flow__controls-button {
+  background: #11161D !important;
+  border-color: #232B36 !important;
+  fill: #A5AFBC !important;
+}
+
+.react-flow__controls-button:hover {
+  background: #161C24 !important;
+}
+
+.react-flow__node {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Slide in animations */
+@keyframes slide-in-from-right-4 {
+  from {
+    transform: translateX(1rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom-4 {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation-duration: 200ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.slide-in-from-right-4 {
+  animation-name: slide-in-from-right-4;
+}
+
+.slide-in-from-right {
+  animation-name: slide-in-from-right-4;
+}
+
+.slide-in-from-bottom-4 {
+  animation-name: slide-in-from-bottom-4;
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
