@@ -1,4 +1,6 @@
-# WorldShield — Security Assessment & Validation Platform
+# worldshield
+
+## Security Assessment & Validation Platform
 
 > Evidence-First, Version-Aware Security Assessment for Smart India Hackathon 2026 (Problem Statement 26163)
 
